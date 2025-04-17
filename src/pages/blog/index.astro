@@ -10,7 +10,8 @@ const categories = Array.from(new Set(posts.map((post) => post.data.category)))
 
 <Layout>
   <main>
-    <section class="container mx-auto mt-10">
+    <section class="w-auto mx-4 xl:w-[1024px] xl:mx-auto">
+      <h1 class="text-4xl my-10 font-bold">Blogs</h1>
       <BlogPostList client:load posts={posts} categories={categories} />
     </section>
   </main>
