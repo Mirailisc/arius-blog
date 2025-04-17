@@ -1,7 +1,15 @@
 ---
+import { Button } from '@/components/ui/button'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="Dark Mode Toggle Example">
-  <main class="container"></main>
+  <main class="w-auto mx-4 xl:w-[1024px] xl:mx-auto">
+    <div class="text-center sm:text-left mt-20">
+      <h1 class="text-4xl font-bold">Arius Blog</h1>
+      <p class="text-zinc-600 dark:text-zinc-300 mt-2">Welcome to Arius Blog.</p>
+
+      <a href="/blog"><Button className="mt-6" variant="default">Start Reading</Button></a>
+    </div>
+  </main>
 </Layout>
