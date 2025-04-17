@@ -1,0 +1,19 @@
+---
+import HeaderLink from './HeaderLink.astro'
+import { SITE_TITLE } from '@/consts'
+import ThemeToggle from './ThemeToggle.astro'
+import { Home, MessageSquareText } from '@lucide/astro'
+---
+
+<header class="sticky z-50 border-b border-black/20 dark:border-white/20">
+  <nav class="flex flex-row justify-between rounded-md items-center dark:bg-black bg-white px-4 py-2 backdrop-blur-lg">
+    <h2 class="text-2xl font-bold"><a href="/">{SITE_TITLE}</a></h2>
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-row gap-4">
+        <HeaderLink href="/"><Home size={16} /> Home</HeaderLink>
+        <HeaderLink href="/blog"><MessageSquareText size={16} /> Blog</HeaderLink>
+      </div>
+      <ThemeToggle />
+    </div>
+  </nav>
+</header>
